@@ -18,6 +18,7 @@ html {
   scroll-snap-type: y mandatory;
   scroll-snap-points-y: repeat(100vh);
 
+  scroll-behavior: smooth;
 }
 
 body {
@@ -36,6 +37,7 @@ div.progress {
   width: 0%;
   height: 10px;
   background-color: #333333;
+  background-color: rgba(255, 255, 255, 0.5);
   z-index: 2;
   transition: background-color 0.5s;
 }
@@ -49,8 +51,13 @@ header {
   z-index: 1;
   transition: color .15s;
 
-	padding: 20px 0 0 20px;
+	padding: 20px 30px;
+  margin: 30px 20px;
+  width: 280px;
+
+  background-color: rgba(255, 255, 255, 0.5);
 }
+
 header.white {
   color: #ffffff;
 }
@@ -62,12 +69,12 @@ section {
 
 section.s1:before {
 	content: '';
-	position: fixed;
+	position: absolute;
   z-index: 1;
 	top: 0;
 	left: 0;
-	border-top: 10px solid #333333;
-	width: 230px;
+	border-top: 10px solid rgba(255, 255, 255, 0.5);
+	width: 302px;
 }
 section.s1 {
 	background-color: #333333;
@@ -84,19 +91,30 @@ video {
   min-width: 100vw;
   min-height: 100vh;
 }
-.scrollprompt {
-  background-image: url(images/scroll-icon.png);
-  background-repeat: no-repeat;
-  background-position: center;
+.scroll-prompt-container {
   position: absolute;
-  height: 90px;
+  height: 80px;
   bottom: 0;
   width: 100%;
-  transition: filter ease-in-out .25s;
+  display: flex;
+  justify-content: center;
 }
-.scrollprompt.scrolled {
-  filter: opacity(0);
+.scroll-prompt-container a {
+  height: 80px;
+  width: 80px;
+
+  background-image: url(images/scroll-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 54px;
+
+  transition: background-image ease-in-out .2s;
+  transition: background-size 0s;
 }
+.scroll-prompt-container a:hover {
+  background-image: url(images/scroll-icon-hover.svg);
+}
+
 
 section.s2 {
   background-color: #c5c5c5;
@@ -108,8 +126,8 @@ section.s2 {
 section.s3 {
   background-color: #111111;
   display: grid;
-  grid-gap: 0;
   grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  grid-gap: 0;
 }
 section.s3 img {
     height: 100%;
@@ -205,6 +223,10 @@ a {
 h1 {
     font-size: 22px;
     font-weight: 600;
+}
+
+header * {
+  line-height: 1.4;
 }
 
 .footer-content p {
