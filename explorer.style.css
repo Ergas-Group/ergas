@@ -114,5 +114,29 @@ section.s3 {
     vertical-align: bottom;
   }
 
+  .footer-content {
+  	width: 100%;
+    display: table;
+  }
+
+  .footer-content div {
+    display: table-cell;
+    width: auto;
+    max-width: 400px;
+    min-width: 300px;
+    padding: 20px;
+    border: 2px solid lightgray;
+    border-collapse: collapse;
+  }
+
+  @media screen and (max-width: 1040px) {
+
+    .footer-content div {
+      display: block;
+      border: none;
+      max-width: 100%;
+      min-width: 100%;
+    }
+
 
 }
