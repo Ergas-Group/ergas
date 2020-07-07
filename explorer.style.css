@@ -2,7 +2,6 @@
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 
-
   html {
     overflow-y: scroll;
     scroll-snap-type: none;
@@ -83,20 +82,23 @@
     vertical-align: middle;
   }
 
+section.s3 {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
   section.s3 div:first-of-type {
     display: none;
   }
 
   section.s3 div:last-of-type {
-    display: table;
-    height: 100%;
-    width: 100%;
-  }
-
-  section.s3 p {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
+  }
+
+  section.s3 p {
     color: white;
   }
 
@@ -111,5 +113,6 @@
     display: table-cell;
     vertical-align: bottom;
   }
+
 
 }
