@@ -357,11 +357,3 @@ video.fade {
 		font-size: 15px
 	}
 }
-
-
-/* MICROSOFT EDGE */
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    header {
-        background-color: red;
-    }
-}
