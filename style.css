@@ -35,7 +35,6 @@ body {
 					scroll-snap-type: mandatory;
 					scroll-snap-type: y mandatory;
 					scroll-snap-points-y: repeat(100vh);
-					-webkit-overflow-scrolling: touch;
 					scroll-behavior: smooth;
         }
     }
@@ -310,12 +309,16 @@ video.fade {
 		-webkit-text-size-adjust: 100%;
 	}
 
-	html {
-		-webkit-overflow-scrolling: touch;
-	}
-
-	section {
-		-webkit-overflow: visible;
+	@media not all and (min-resolution:.001dpcm) {
+	    @media {
+	        body {
+						overflow-x: hidden;
+						min-height: 100vh;
+						overflow-y: scroll;
+						scroll-snap-type: none;
+						scroll-behavior: smooth;
+	        }
+	    }
 	}
 
 	section.s1:before {
