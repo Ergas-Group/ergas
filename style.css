@@ -321,6 +321,17 @@ video.fade {
 	    }
 	}
 
+
+	div.progress {
+		display: none;
+	}
+
+	header {
+		margin: 20px 20px;
+		width: 280px;
+	}
+
+
 	section.s1:before {
 		border-top: 0;
 	}
