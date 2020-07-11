@@ -20,7 +20,12 @@ h1s.forEach(h1 => {
   observer.observe(h1)
 })
 
-const video = document.querySelectorAll('video');
-video.forEach(video => {
+const videos = document.querySelectorAll('video');
+videos.forEach(video => {
   observer.observe(video)
+})
+
+const miscfades = document.querySelectorAll('.miscfade');
+miscfades.forEach(miscfade => {
+  observer.observe(miscfade)
 })
