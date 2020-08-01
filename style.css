@@ -24,6 +24,7 @@ html {
 body {
 	color: #333333;
 	margin: 0;
+	overflow-x: hidden;
 }
 
 @media not all and (min-resolution:.001dpcm) {
@@ -70,6 +71,10 @@ header {
 	margin: 30px 20px;
 	width: 280px;
 	background-color: rgba(255, 255, 255, 0.5);
+}
+
+header .page {
+	display: none;
 }
 
 header.white {
@@ -379,19 +384,23 @@ video.fade {
 	    }
 	}
 
-
 	div.progress {
 		display: none;
 	}
 
 	header {
-		margin: 20px 20px;
-		width: 280px;
+		width: calc(100vw - 40px);
+		margin: 0;
+		margin: 20px;
+		text-align: center;
 	}
-
 
 	section.s1:before {
 		border-top: 0;
+	}
+
+	.scroll-prompt-container {
+		bottom: 6px;
 	}
 
 	section.s2 {
@@ -409,7 +418,7 @@ video.fade {
 	}
 
 	section.s3 div:first-of-type {
-		max-height: 50vh;
+		height: 70vh;
 	}
 
 	section.s3 div:last-of-type {
@@ -418,7 +427,17 @@ video.fade {
 	}
 
 	section.s3 p {
-		padding: 20px;
+		padding: 40px 20px;
+	}
+
+	.form-container {
+		margin-top: 70px;
+		align-items: center;
+	}
+
+	form input {
+		max-width: 100%;
+		margin: 12px 0;
 	}
 
 	footer {
@@ -429,12 +448,10 @@ video.fade {
 		flex-direction: column;
 		width: 100%;
 		margin: 0 auto;
-		padding: 8px 20px 20px 20px;
+		padding: 10px 20px 20px 20px;
 	}
 
-	.footer-content div:nth-child(1),
-	.footer-content div:nth-child(2),
-	.footer-content div:nth-child(3) {
+	.footer-content div {
 		width: 100%;
 		max-width: 420px;
 		padding: 12px 0 0 0;
@@ -444,7 +461,8 @@ video.fade {
 	h2,
 	h3,
 	p,
-	a {
+	a,
+	form * {
 		font-size: 15px
 	}
 }
