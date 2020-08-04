@@ -418,6 +418,10 @@ video.fade {
 		text-align: center;
 	}
 
+	nav {
+		display: none;
+	}
+
 	section.s1:before {
 		border-top: 0;
 	}
