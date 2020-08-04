@@ -84,17 +84,11 @@ header.white {
 nav {
 	z-index: 1;
   position: fixed;
-  top: 50%;
-  left: 19px;
-  transform: translate(0, -50%);
-	height: 160px;
 	width: 25px;
-
-
-		top: 30px;
-		left: 20px;
-		height: 96px;
-		transform: none;
+	top: 30px;
+	left: 20px;
+	height: 96px;
+	transform: none;
 
   display: flex;
   flex-direction: column;
@@ -104,12 +98,9 @@ nav {
 nav a {
 	width: 20px;
 	height: 20px;
-	border-radius: 50%;
 	background-color: rgba(255, 255, 255, 0.5);
 	color: white;
-
 	border-radius: 0;
-
 }
 
 nav a.selected {
@@ -230,7 +221,7 @@ section.s4 {
 
 form {
   width: 1200px;
-	padding: 96px 20px 20px 20px;
+	padding: 20px 20px 20px 20px;
   max-width: 100%;
 	display: flex;
 	justify-content: space-between;
@@ -318,6 +309,10 @@ footer {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
+}
+
+footer .credit {
+	text-align: right;
 }
 
 .button {
@@ -423,14 +418,14 @@ video.fade {
 	}
 
 	header {
-		width: calc(100vw - 40px);
-		margin: 0;
-		margin: 20px;
+		width: calc(100vw - 65px);
+		margin: 20px 20px 20px 45px;
+		padding-right: 45px;
 		text-align: center;
 	}
 
 	nav {
-		display: none;
+		top: 20px;
 	}
 
 	section.s1:before {
@@ -469,7 +464,7 @@ video.fade {
 	}
 
 	.form-container {
-		margin-top: 70px;
+		margin-top: 0px;
 		align-items: center;
 	}
 
@@ -496,11 +491,21 @@ video.fade {
 		border: none;
 	}
 
+	footer .credit {
+		text-align: left;
+	}
+
 	h2,
 	h3,
 	p,
 	a,
 	form * {
 		font-size: 15px
+	}
+}
+
+@media screen and (max-height: 900px) {
+	.form-container {
+		margin-top: 90px;
 	}
 }
