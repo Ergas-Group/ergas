@@ -67,7 +67,7 @@ header {
 	z-index: 1;
 	transition: color .15s;
 	padding: 20px 30px;
-	margin: 30px 20px;
+	margin: 30px 20px 30px 45px;
 	width: 280px;
 	height: 96px;
 	background-color: rgba(255, 255, 255, 0.5);
@@ -92,7 +92,7 @@ nav {
 
 
 		top: 30px;
-		left: 306px;
+		left: 20px;
 		height: 96px;
 		transform: none;
 
