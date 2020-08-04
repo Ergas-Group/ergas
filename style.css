@@ -80,6 +80,31 @@ header.white {
 	color: #ffffff;
 }
 
+nav {
+	z-index: 99;
+  position: fixed;
+  top: 50%;
+  left: 19px;
+  transform: translate(0, -50%);
+	height: 160px;
+	width: 25px;
+  display: flex;
+  flex-direction: column;
+	justify-content: space-between;
+}
+
+nav a {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0.5);
+	color: white;
+}
+
+nav a.selected {
+	background-color: rgba(255, 255, 255, 0.9);
+}
+
 section {
 	min-height: 100%;
 	min-height: 100vh;
@@ -194,7 +219,7 @@ section.s4 {
 
 form {
   width: 1200px;
-	padding: 20px;
+	padding: 96px 20px 20px 20px;
   max-width: 100%;
 	display: flex;
 	justify-content: space-between;
@@ -333,7 +358,6 @@ header * {
 	margin: 0;
 	font-size: 12px;
 }
-
 
 /* ANIMATIONS */
 img {
