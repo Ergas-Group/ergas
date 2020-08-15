@@ -68,18 +68,29 @@ header {
   left: 0;
   z-index: 2;
   transition: color .15s;
-  padding: 20px 30px;
-  margin: 20px;
-  width: 280px;
+  padding: 16px 26px;
+  margin: 20px 20px 20px 170px;
+  width: 260px;
   height: 126px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
   background-color: rgba(255, 255, 255, 0.5);
 }
 
+.logo {
+  position: fixed;
+  background-color: white;
+  top: 0;
+  left: 0;
+  margin: 20px;
+  z-index: 4;
+  width: 126px;
+  height: 126px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 header .page {
-  display: none;
+  display:;
 }
 
 header.white {
@@ -89,7 +100,7 @@ header.white {
 nav {
   z-index: 2;
   position: fixed;
-  width: 25px;
+  width: 20px;
   top: 30px;
   right: 20px;
   height: 126px;
@@ -419,6 +430,11 @@ input {
 h1 {
   font-size: 22px;
   font-weight: 600;
+}
+
+header h1 {
+  font-size: 26px;
+  white-space: nowrap;
 }
 
 header * {
