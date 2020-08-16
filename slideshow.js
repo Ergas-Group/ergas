@@ -1,4 +1,4 @@
-const slideSection = document.querySelector("section.s4")
+const slideSection = document.querySelector("section.s3")
 const slideshow = document.querySelector(".slideshow")
 const slideElement = slideshow.querySelectorAll("div")
 const colour = ["#87977A", "#81829E", "#676767"]
