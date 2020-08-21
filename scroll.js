@@ -1,7 +1,6 @@
 
 
         const bodyTag = document.querySelector("body")
-        const progressTag = document.querySelector("div.progress")
         const sections = document.querySelectorAll("section")
         const clientTag = document.querySelector("div.client")
         const pageTag = document.querySelector("div.page")
@@ -30,10 +29,10 @@
 
               if (section.hasAttribute("data-is-dark")) {
                 headerTag.classList.add("white")
-                progressTag.classList.add("white")
+
               } else {
                 headerTag.classList.remove("white")
-                progressTag.classList.remove("white")
+                
               }
             }
           })
