@@ -233,8 +233,8 @@ video {
 section.s2 {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  padding: 60px;
+  justify-content: center;
+  padding: 20px;
 }
 
 section.s2 p {
@@ -243,6 +243,26 @@ section.s2 p {
   margin: 0 auto;
   text-align: justify;
 }
+
+section.s2 .about-columns {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+section.s2 .about-columns ul {
+  padding-left: 20px;
+  padding-top: 0;
+  margin-top: 2px;
+}
+
+section.s2 .about-columns ul li {
+  padding-top: 5px;
+}
+
 
 section.s3 {
   display: flex;
@@ -450,6 +470,10 @@ header h1 {
 
 header * {
   line-height: 1.4;
+}
+
+h3 {
+  font-weight: 600;
 }
 
 footer p {
