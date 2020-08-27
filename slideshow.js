@@ -1,7 +1,7 @@
 const slideSection = document.querySelector("section.s3")
 const slideshow = document.querySelector(".slideshow")
 const slideElement = slideshow.querySelectorAll("div")
-const colour = ["#87977A", "#81829E", "#676767", "#87977A", "#81829E", "#676767", "#87977A", "#81829E", "#676767", "#87977A", "#81829E"]
+// const colour = ["#87977A", "#81829E", "#676767", "#87977A", "#81829E", "#676767", "#87977A", "#81829E", "#676767", "#87977A", "#81829E"]
 
 
 //defining which slide we are on
@@ -20,6 +20,6 @@ slideSection.addEventListener("click", function() {
   z = z + 1
 
   slideElement[currentSlide].style.zIndex = z
-  slideSection.style.backgroundColor = colour[currentSlide]
-  slideElementSpan.style.backgroundColor = colour[currentSlide]
+//  slideSection.style.backgroundColor = colour[currentSlide]
+//  slideElementSpan.style.backgroundColor = colour[currentSlide]
 })
