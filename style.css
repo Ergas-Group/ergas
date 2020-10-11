@@ -217,14 +217,29 @@ section.s2 .about-columns {
   padding-top: 10px;
   display: flex;
   justify-content: space-between;
+
+}
+
+section.s2 .about-columns div {
+  background-color: ;
+  width: 30%;
 }
 section.s2 .about-columns ul {
-  padding-left: 20px;
   padding-top: 0;
   margin-top: 2px;
+  padding-left: 0;
+
 }
+
+section.s2 .about-columns ul li:first-child {
+  border-top: 1px solid lightgray;
+}
+
+
 section.s2 .about-columns ul li {
-  padding-top: 5px;
+  padding: 4px 0;
+  border-bottom: 1px solid lightgray;
+  list-style: none;
 }
 
 
