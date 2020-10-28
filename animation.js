@@ -10,10 +10,10 @@ const observer = new IntersectionObserver(entries => {
   threshold: [0, 0.2, 0.8, 1]
 })
 
-const images = document.querySelectorAll('img');
-images.forEach(image => {
-  observer.observe(image)
-})
+// const images = document.querySelectorAll('img');
+// images.forEach(image => {
+//   observer.observe(image)
+// })
 
 const h1s = document.querySelectorAll('h1');
 h1s.forEach(h1 => {

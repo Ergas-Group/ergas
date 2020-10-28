@@ -32,7 +32,7 @@
 
 <body>
 
-  <header>ERGAS<span>GROUP</span></header>
+  <header>Ergas<span>Group</span></header>
 
   <nav>
     <a href="#s1"></a>
@@ -55,7 +55,7 @@
   </section>
 
   <section class="s2 miscfade" id="s2" data-is-dark="yes">
-    <div>
+    <div class="main-about-content">
       <p>
         Ergas Group is the investment group for the Ergas Family. We are comprised of many family-owned companies and partnerships, that are involved in the acquisition, development, management, capital lending and private equity of commercial and
         residential properties in the United States and Canada. The primary focus of the Ergas Group has been in the acquisition and management of multi-family residential properties across the United States. We seek to acquire well-located
@@ -65,7 +65,26 @@
         reward profiles. As investors of our personal wealth, long-term value creation is our principal goal.
       </p>
 
-      <div class="about-columns">
+      <a><button onclick="showOrHideDiv()">READ MORE</button></a>
+
+    </div>
+
+    <footer>
+
+      <p>Suite 600 - 1067 West Cordova St.
+      <br class="address-break">Vancouver, BC, V6C 1C7</p>
+
+      <p>Tel: (604) 685-8986<br class="address-break">
+      Copyright © 2020 Ergas Group, all rights reserved.</p>
+
+    </footer>
+
+
+    <div class="about-columns-wrapper" id="showOrHide">
+
+      <button onclick="showOrHideDiv()" class="close-button"></button>
+
+      <div class="container">
 
         <div>
           <h3>Real Estate</h3>
@@ -100,93 +119,74 @@
 
   <section class="s3" id="s3" data-is-dark="yes">
 
-      <div>
-        <img class="slideshow-img" src="/images/000.jpg">
-        <span>
-          <h2>An Ergas Project</h2>
-        </span>
-      </div>
+    <div>
+      <img class="slideshow-img" src="/images/000.jpg">
+      <span>
+        <h2>An Ergas Project</h2>
+      </span>
+    </div>
 
-      <div>
-        <img class="slideshow-img" src="/images/100.jpg">
-        <span>
-          <h2>An Ergas Project</h2>
-        </span>
-      </div>
+    <div>
+      <img class="slideshow-img" src="/images/100.jpg">
+      <span>
+        <h2>A Different Ergas Project</h2>
+      </span>
+    </div>
 
-      <div>
-        <img class="slideshow-img" src="/images/200.jpg">
-        <span>
-          <h2>A Different Ergas Project</h2>
-        </span>
-      </div>
+    <div>
+      <img class="slideshow-img" src="/images/200.jpg">
+      <span>
+        <h2>Apartment with a View</h2>
+      </span>
+    </div>
 
-      <div>
-        <img class="slideshow-img" src="/images/300.jpg">
-        <span>
-          <h2>Project 3</h2>
-        </span>
-      </div>
+    <div>
+      <img class="slideshow-img" src="/images/300.jpg">
+      <span>
+        <h2>Project 3</h2>
+      </span>
+    </div>
 
-      <div>
-        <img class="slideshow-img" src="/images/400.jpg">
-        <span>
-          <h2>An Ergas Project</h2>
-        </span>
-      </div>
+    <div>
+      <img class="slideshow-img" src="/images/400.jpg">
+      <span>
+        <h2>Project 4</h2>
+      </span>
+    </div>
 
-      <div>
-        <img class="slideshow-img" src="/images/500.jpg">
-        <span>
-          <h2>An Ergas Project</h2>
-        </span>
-      </div>
+    <div>
+      <img class="slideshow-img" src="/images/500.jpg">
+      <span>
+        <h2>A Different Ergas Project</h2>
+      </span>
+    </div>
 
-      <div>
-        <img class="slideshow-img" src="/images/600.jpg">
-        <span>
-          <h2>An Ergas Project</h2>
-        </span>
-      </div>
+    <div>
+      <img class="slideshow-img" src="/images/600.jpg">
+      <span>
+        <h2>New Development</h2>
+      </span>
+    </div>
 
-      <div>
-        <img class="slideshow-img" src="/images/700.jpg">
-        <span>
-          <h2>An Ergas Project</h2>
-        </span>
-      </div>
+    <div>
+      <img class="slideshow-img" src="/images/700.jpg">
+      <span>
+        <h2>Investment Property #17</h2>
+      </span>
+    </div>
 
-      <div>
-        <img class="slideshow-img" src="/images/800.jpg">
-        <span>
-          <h2>An Ergas Project</h2>
-        </span>
-      </div>
+    <div>
+      <img class="slideshow-img" src="/images/800.jpg">
+      <span>
+        <h2>Ergas Development 5</h2>
+      </span>
+    </div>
 
-      <div>
-        <img class="slideshow-img" src="/images/900.jpg">
-        <span>
-          <h2>An Ergas Project</h2>
-        </span>
-      </div>
 
-      <div>
-        <img class="slideshow-img" src="/images/1000.jpg">
-        <span>
-          <h2>An Ergas Project</h2>
-        </span>
-      </div>
-
-      <div>
-        <img class="slideshow-img" src="/images/1100.jpg">
-        <span>
-          <h2>An Ergas Project</h2>
-        </span>
-      </div>
 
   </section>
 
-  <section class="s4" id="s4" data-client="Get in Touch" data-page="We accept inquiries and welcome partnerships">
+  <section class="s4" id="s4">
 
     <div class="form-container">
 
@@ -194,29 +194,20 @@
 
         <input type="text" name="name" placeholder="Name" required="">
 
-        <input type="email" name="_replyto" placeholder="Email Address" required="">
+        <input type="email" name="_replyto" placeholder="Email" required="">
 
-        <input type="message" placeholder="Message">
-
-        <input type="telephone" name="phone" placeholder="Phone">
+        <input id="message" type="message" placeholder="Message">
 
         <input type="file" name="upload" class="file-input">
 
-        <input type="submit" id="submit" value="Submit Responses">
+        <input type="telephone" name="phone" placeholder="Phone">
+
+        <input type="submit" id="submit" value="SUBMIT">
 
       </form>
 
     </div>
 
-    <footer>
-
-      <p>Suite 600 - 1067 West Cordova St. <br class="address-break">Vancouver, BC, V6C 1C7</p>
-
-      <p>Tel: (604) 685-8986</p>
-
-      <p>Copyright © 2020 Ergas Group, all rights reserved.</p>
-
-    </footer>
 
   </section>
 
@@ -231,6 +222,17 @@
   </script>
 
   <script src="/slideshow.js">
+  </script>
+
+  <script>
+    function showOrHideDiv() {
+      var v = document.getElementById("showOrHide");
+      if (v.style.display === "none") {
+        v.style.display = "flex";
+      } else {
+        v.style.display = "none";
+      }
+    }
   </script>
 
 </body>

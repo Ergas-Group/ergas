@@ -17,9 +17,7 @@ html {
   scroll-snap-points-y: repeat(100vh);
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
-
   background-color: #333333;
-
   -webkit-text-size-adjust: 100%;
   font-size: 18px;
   text-rendering: optimizeLegibility;
@@ -51,20 +49,19 @@ body {
 header {
   z-index: 99;
   position: fixed;
-
   left: 2rem;
   top: 1.5rem;
-
   padding: 0;
   margin: 0;
   color: white;
   font-weight: 700;
   transition: color .15s;
-
 }
+
 header span {
   font-weight: 400;
 }
+
 header.white {
   color: black;
 }
@@ -81,18 +78,18 @@ nav {
   flex-direction: column;
   justify-content: space-between;
 }
+
 nav a {
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: rgba(255, 255, 255, 0.5);
-  color: white;
+  width: 1.1rem;
+  height: 1.1rem;
+  background-color: #BCBEBC;
   border-radius: 50%;
-	transition: background-color .15s ease-in-out;
-  border: 1px solid black;
+  transition: background-color .15s ease-in-out;
 }
+
 nav a:hover,
-nav a selected {
-	background-color: white;
+nav a.selected {
+  background-color: lightgray;
 }
 
 section {
@@ -107,6 +104,7 @@ section {
   height: 100vh;
   overflow: hidden;
 }
+
 video {
   min-width: 100vw;
   min-height: 100vh;
@@ -115,52 +113,133 @@ video {
 .scroll-prompt-container {
   position: absolute;
   height: 5rem;
-  bottom: .25rem;
+  bottom: 1.5rem;
   width: 100%;
   display: flex;
   justify-content: center;
 }
+
 .scroll-prompt-container a {
   height: 5rem;
   width: 5rem;
-  background-image: url(images/scroll-icon.svg);
+  background-image: url(/images/scroll-icon.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 3rem;
+  background-size: 5rem;
   transition: background-image ease-in-out .2s;
   transition: background-size 0s;
 }
+
 .scroll-prompt-container a:hover {
-  background-image: url(images/scroll-icon-hover.svg);
+  background-image: url(/images/scroll-icon-hover.svg);
 }
 
 section.s2 {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   padding: 1.5rem;
 }
+
+section.s2 .main-about-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 6rem;
+}
+
 section.s2 div {
   width: 100%;
   max-width: 50rem;
   margin: 0 auto;
   text-align: justify;
 }
-section.s2 .about-columns {
+
+section.s2 a button {
+  margin: 0 auto;
+  margin-top: 4rem;
+  background-color: black;
+  color: white;
+  padding: .5rem 1rem;
+  display: block;
+  border: none;
+}
+
+section.s2 .about-columns-wrapper {
+  position: absolute;
+  min-width: 100vw;
+  min-height: 100vh;
+  top: 100vh;
+  left: 0;
+  flex-direction: column;
+  justify-content: center;
+  background-color: black;
+  display: none;
+}
+
+section.s2 button.close-button {
+  margin: 0 auto;
+  display: block;
+  background-color: #1E1E1E;
+  border: none;
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: 400;
+  color: white;
+  height: 4rem;
+  width: 4rem;
+  background-image: url(/images/close-button.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 4rem;
+  transition: background-image ease-in-out .2s;
+  transition: background-size 0s;
+  margin-top: -9rem;
+}
+
+section.s2 button.close-button:hover {
+  background-image: url(/images/close-button-hover.svg);
+}
+
+section.s2 .about-columns-wrapper .container {
+  padding-top: 3rem;
   display: flex;
   justify-content: space-between;
-
-  padding: 0;
-  margin: 0;
-}
-section.s2 .about-columns div {
-  width: calc(33.33% - 2rem);
-  margin: 0;
-  padding: 0;
+  align-items: center;
+  min-width: 60vw;
 }
 
+section.s2 .about-columns-wrapper .container div {
+  width: 33.33%;
+  margin: 0;
+  padding: 0 2rem;
+  color: white;
+}
+
+section.s2 .about-columns-wrapper .container div:nth-child(2) {
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+}
+
+footer {
+  display: flex;
+  width: 50rem;
+  margin: 0 auto;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 1px solid;
+  color: black;
+  height: 3rem;
+}
+
+footer p:last-of-type {
+  text-align: right;
+}
 
 section.s3 {
+  min-height: 100vh;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -170,39 +249,55 @@ section.s3 {
 
 section.s3 div {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 80vw;
+  height: 80vh;
   padding: 2rem;
   padding-top: 5.2rem;
 }
+
 section.s3 img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
+section.s3 span:after {
+  content: '';
+  height: 2.5rem;
+  width: 4rem;
+  background-image: url(/images/arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 3rem;
+  position: absolute;
+  right: 1.5rem;
+  top: 0;
+}
 
 section.s3 div span {
-  z-index: 100;
-  display: block;
+  margin: 0 auto;
+  transform: translateY(1.5rem);
   position: absolute;
-  top: 2rem;
-  right: 2rem;
+  bottom: 0;
+  left: 0;
+  padding: 0 2rem;
   background-color: white;
-  width: 800px;
-  text-align: right;
+  width: 80vw;
+  text-align: center;
+
+  display: flex;
+  justify-content: space-between;
 
 }
-section.s3 div span:after {
-	content: '>';
-  display: none;
+
+section.s3 div span ::selection {
+  color: black;
+  background: transparent;
 }
+
 .slideshow-img:first-child {
   z-index: 1;
 }
-
-
-
 
 section.s4 {
   background-color: black;
@@ -210,6 +305,7 @@ section.s4 {
   flex-direction: column;
   justify-content: space-between;
 }
+
 .form-container {
   width: 100%;
   flex-grow: 1;
@@ -217,15 +313,16 @@ section.s4 {
   justify-content: center;
   align-items: center;
 }
+
 form {
   width: 50rem;
   padding: 1rem;
-  margin-top: 6rem;
   max-width: 100%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 form input {
   max-width: calc(50% - 10px);
   width: 100%;
@@ -244,22 +341,25 @@ form input {
   -webkit-appearance: none;
   appearance: none;
   background-image: none;
-
   transition: none;
 }
+
 form input::-webkit-input-placeholder {
   color: white;
   opacity: 1;
 }
+
 form input.file-input::-webkit-file-upload-button {
   visibility: hidden;
 }
+
 form input.file-input {
   padding: 0;
   padding-top: 6px;
 }
+
 form input.file-input::before {
-  content: 'Select Files:';
+  content: 'Choose File';
   border: none;
   padding: 0;
   margin: 0;
@@ -269,36 +369,25 @@ form input.file-input::before {
   -webkit-user-select: none;
   cursor: pointer;
 }
-form #submit {
+
+form input#message {
+  min-width: 100%;
+}
+
+form input#submit {
   background-color: transparent;
   border: 2px solid;
   border-radius: 2px;
   padding: 0;
   transition: .2s background-color ease-in-out;
+  max-width: 25%;
 }
+
 form #submit:hover {
   cursor: pointer;
   background-color: white;
   border-color: white;
   color: black;
-}
-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
-  text-align: right;
-
-	max-width: 100%;
-  margin: 0;
-  padding: 0 2.5rem 0 0;
-  position: relative;
-  left: 100%;
-  transform: translateX(-100%);
-  bottom: 30px;
-  height: 160px;
-  width: 350px;
-  color: white;
 }
 
 /* TEXT */
@@ -308,27 +397,32 @@ footer {
 }
 
 header {
-  font-size: 1.777rem;
+  font-size: 1.5rem;
   white-space: nowrap;
 }
+
 p {
   font-size: 1rem;
 }
+
 h2 {
   font-size: 1rem;
   font-weight: 400;
 }
+
 h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  padding-top: 0;
-  padding-bottom: .33rem;
-  border-bottom: 2px solid;
-}
-.about-columns p {
   font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0;
+  margin-bottom: .1rem;
+  text-transform: uppercase;
 }
 
+.container p {
+  font-size: 0.75rem;
+  margin-top: 0;
+  padding-top: 0;
+}
 
 footer p {
   margin: 10px 0 0 0;
@@ -336,14 +430,18 @@ footer p {
 }
 
 /* ANIMATIONS */
-img {
+
+/*img {
   filter: grayscale(1) brightness(.25);
   transition: filter 2s;
 }
 
+
 img.fade {
   filter: grayscale(0) brightness(1);
 }
+*/
+
 
 video {
   filter: grayscale(1) brightness(.65);
@@ -364,7 +462,7 @@ video.fade {
 }
 
 /* MOBILE */
-@media screen and (max-width: 1400px), (max-height: 600px) {
+@media screen and (max-width: 54rem) {
   * {
     text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
@@ -383,30 +481,67 @@ video.fade {
     }
   }
 
-
   nav {
     display: none;
   }
 
-  section.s1:before {
-    border-top: 0;
-  }
-
   .scroll-prompt-container {
-    bottom: 6px;
+    bottom: 0rem;
+  }
+  .scroll-prompt-container a {
+    height: 3rem;
+    width: 3rem;
+    background-size: 3rem;
   }
 
-  section.s2 p {
-    margin-top: 80px;
+  section.s2 .about-columns-wrapper .container {
+    padding-top: 3rem;
+    flex-direction: column;
+  }
+  section.s2 .about-columns-wrapper .container div {
+    width: 100%;
+  }
+  section.s2 .about-columns-wrapper .container div:nth-child(2) {
+    border: none;
   }
 
-	.slideshow {
-	  margin-top: 80px;
-	}
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+  }
+
+  footer p {
+    text-align: center;
+  }
+  footer p:last-of-type {
+    text-align: center;
+  }
+
+  section.s3 div {
+    position: absolute;
+    width: 100vw;
+    height: calc(100vh - 5rem);
+    padding: 2rem;
+  }
+
+
+  section.s3 div span {
+    width: 100vw;
+  }
+
+  section.s3 span:after {
+    right: 1.4rem;
+  }
+
 
   .form-container {
     margin-top: 90px;
     align-items: center;
+    padding: 0 1rem;
   }
 
   form input {
@@ -414,81 +549,14 @@ video.fade {
     margin: 12px 0;
   }
 
-  footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-  	width: 100%;
-    margin: 0;
-    padding: 0 0 20px 0;
-    position: relative;
-    bottom: 0;
-    height: 110px;
-    color: black;
-    background-color: rgba(255, 255, 255, 0.7);
-  }
-
-  footer p {
-    width: 100%;
-    text-align: center;
-    margin-bottom: -4px;
-  }
-
-  footer .address-break {
-    display: none;
-  }
-
   h1,
   h2,
   h3,
   p,
   a,
-  li,
+  button,
   input,
   form * {
     font-size: 15px
   }
-}
-
-@media screen and (max-width: 700px) {
-  html {
-    overflow-x: hidden;
-  }
-
-
-  .slideshow div img {
-    object-fit: cover;
-  }
-
-  h1,
-  h2,
-  h3,
-  p,
-  a,
-  li,
-  input {
-    font-size: 12px;
-  }
-
-  h3 {
-    font-size: 12px;
-  }
-
-  .form-container {
-    margin-top: 46px;
-  }
-
-  footer {
-    height: 76px;
-    padding-top: 20px;
-  }
-
-  footer p {
-    margin: 4px 0 0 0;
-    font-size: 10px;
-  }
-
-
 }
