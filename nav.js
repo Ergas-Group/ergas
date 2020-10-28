@@ -1,3 +1,5 @@
+
+
 const navLinks = document.querySelectorAll("nav a")
 
 const navObserver = new IntersectionObserver(entries => {
