@@ -455,7 +455,7 @@ video.fade {
 }
 
 .miscfade {
-  background-color: lightgray;
+  background-color: #CCD2D6;
   transition: background-color 1.2s ease-in-out;
 }
 
