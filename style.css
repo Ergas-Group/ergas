@@ -108,6 +108,7 @@ section.s1 {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  background-image: url('/images/poster.png');
 }
 
 video {
@@ -242,6 +243,7 @@ footer {
   align-items: flex-end;
   border-top: 1px solid;
   color: black;
+  padding-top: .5rem;
 }
 
 
@@ -619,10 +621,6 @@ video.fade {
     overflow: hidden;
     display: flex;
     justify-content: center;
-  }
-
-  header:after {
-
   }
 
   video {
