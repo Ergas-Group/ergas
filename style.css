@@ -69,8 +69,8 @@ header.white {
 nav {
   z-index: 2;
   position: fixed;
-  width: 2rem;
-  right: 1.5rem;
+  width: .83rem;
+  right: 2rem;
   top: 50%;
   transform: translateY(-50%);
   height: 5.5rem;
@@ -97,6 +97,11 @@ section {
   min-height: 100vh;
   scroll-snap-align: start;
   scroll-snap-stop: always;
+  padding: 0 1rem;
+}
+
+section.s1 {
+  padding: 0;
 }
 
 .background-video {
@@ -138,7 +143,7 @@ section.s2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1.5rem;
+  padding-bottom: .5rem;
 }
 
 section.s2 .main-about-content {
@@ -153,12 +158,10 @@ section.s2 div {
   width: 100%;
   max-width: 50rem;
   margin: 0 auto;
-  text-align: justify;
 }
 
-section.s2 a button {
-  margin: 0 auto;
-  margin-top: 4rem;
+section.s2 button {
+  margin: 3rem auto;
   background-color: black;
   color: white;
   padding: .5rem 1rem;
@@ -166,8 +169,15 @@ section.s2 a button {
   border: none;
 }
 
+section.s2 button:hover {
+  background-color: #333333;
+  color: white;
+  cursor: pointer;
+}
+
 section.s2 .about-columns-wrapper {
   position: absolute;
+  z-index: 999;
   min-width: 100vw;
   min-height: 100vh;
   top: 100vh;
@@ -187,12 +197,12 @@ section.s2 button.close-button {
   font-size: 2rem;
   font-weight: 400;
   color: white;
-  height: 4rem;
-  width: 4rem;
+  height: 3.5rem;
+  width: 3.5rem;
   background-image: url(/images/close-button.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 4rem;
+  background-size: 3.5rem;
   transition: background-image ease-in-out .2s;
   transition: background-size 0s;
   margin-top: -9rem;
@@ -225,18 +235,15 @@ section.s2 .about-columns-wrapper .container div:nth-child(2) {
 footer {
   display: flex;
   width: 50rem;
+  max-width: 100%;
   margin: 0 auto;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
   border-top: 1px solid;
   color: black;
-  height: 3rem;
 }
 
-footer p:last-of-type {
-  text-align: right;
-}
 
 section.s3 {
   min-height: 100vh;
@@ -284,10 +291,13 @@ section.s3 div span {
   background-color: white;
   width: 80vw;
   text-align: center;
-
   display: flex;
   justify-content: space-between;
+}
 
+section.s3 img:hover,
+section.s3 span:hover {
+  cursor: pointer;
 }
 
 section.s3 div span ::selection {
@@ -316,7 +326,7 @@ section.s4 {
 
 form {
   width: 50rem;
-  padding: 1rem;
+  padding: 1rem 0;
   max-width: 100%;
   display: flex;
   justify-content: space-between;
@@ -424,15 +434,24 @@ h3 {
   padding-top: 0;
 }
 
+footer a,
 footer p {
-  margin: 10px 0 0 0;
+  white-space: nowrap;
   font-size: 12px;
-  color: black;
   text-decoration: none;
+  color: black;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
 }
 
-/* ANIMATIONS */
+footer p:last-of-type {
+  text-align: right;
+}
 
+
+
+/* ANIMATIONS */
 /*img {
   filter: grayscale(1) brightness(.25);
   transition: filter 2s;
@@ -443,8 +462,6 @@ img.fade {
   filter: grayscale(0) brightness(1);
 }
 */
-
-
 video {
   filter: grayscale(1) brightness(.65);
   transition: filter 3s;
@@ -464,7 +481,25 @@ video.fade {
 }
 
 /* MOBILE */
-@media screen and (max-width: 54rem) {
+@media screen and (max-width: 70rem) {
+  header {
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+  }
+
+  header div {
+    width: 50rem;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 50rem) {
   * {
     text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
@@ -483,44 +518,53 @@ video.fade {
     }
   }
 
-  nav {
-    display: none;
+  p {
+    text-align: justify;
   }
 
-  .scroll-prompt-container {
-    bottom: 0rem;
+  header {
+    top: 1rem;
   }
-  .scroll-prompt-container a {
-    height: 3rem;
-    width: 3rem;
-    background-size: 3rem;
+
+  section.s2 .main-about-content {
+    flex-grow: 0;
+    margin-top: 4rem;
   }
 
   section.s2 .about-columns-wrapper .container {
     padding-top: 3rem;
     flex-direction: column;
   }
+
   section.s2 .about-columns-wrapper .container div {
     width: 100%;
+    min-height: 100%;
+    padding: 1rem;
   }
+
   section.s2 .about-columns-wrapper .container div:nth-child(2) {
     border: none;
   }
 
+  section.s2 button.close-button {
+    margin-top: 1rem;
+  }
 
   footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 4rem;
   }
 
   footer p {
     text-align: center;
+    padding: .5rem 0;
   }
+
   footer p:last-of-type {
     text-align: center;
+    padding-top: 0;
   }
 
   section.s3 div {
@@ -530,7 +574,6 @@ video.fade {
     padding: 2rem;
   }
 
-
   section.s3 div span {
     width: 100vw;
   }
@@ -538,7 +581,6 @@ video.fade {
   section.s3 span:after {
     right: 1.4rem;
   }
-
 
   .form-container {
     margin-top: 90px;
@@ -561,4 +603,36 @@ video.fade {
   form * {
     font-size: 15px
   }
+}
+
+@media screen and (max-height: 22rem) {
+  section.s2,
+  section.s3,
+  section.s4 {
+    display: none;
+  }
+
+
+  .background-video {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+
+  header:after {
+
+  }
+
+  video {
+    width: 100vw;
+    position: fixed;
+  }
+
+  .scroll-prompt-container {
+    display: none;
+  }
+
+
 }
