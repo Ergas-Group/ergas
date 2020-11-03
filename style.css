@@ -634,3 +634,70 @@ video.fade {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section.s5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: .5rem;
+}
+
+section.s5 .main-about-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section.s5 div {
+  width: 100%;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+section.s5 .container {
+  padding-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+section.s5 .container div {
+  width: 15.66rem;
+  margin: 0;
+  padding: 0;
+}
+
+section.s5 .container div:nth-of-type(1){
+  padding-right: 2rem;
+}
+
+section.s5 .container div:nth-of-type(2){
+  width: 17.66rem;
+  border-right: 1px solid;
+  border-left: 1px solid;
+  padding: 0 2rem;
+
+}
+
+section.s5 .container div:nth-of-type(3){
+  padding-left: 2rem;
+}
