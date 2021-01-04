@@ -1,26 +1,27 @@
-const bodyTag = document.querySelector("body")
-const sections = document.querySelectorAll("section")
 const headerTag = document.querySelector("header")
 
-document.addEventListener("scroll", function() {
-  const pixels = window.pageYOffset
-  const pageHeight = bodyTag.getBoundingClientRect().height
-  const totalScrollableDistance = pageHeight - window.innerHeight
-  const percentage = pixels / totalScrollableDistance
-  progressTag.style.width = `${100 * percentage}%`
-})
-
-document.addEventListener("scroll", function() {
+const toggleHeader = function () {
   const pixels = window.pageYOffset
 
-  sections.forEach(section => {
-    if (section.offsetTop - 46 <= pixels) {
+  if (pixels > 50) {
+    headerTag.classList.add("scrolled")
+  } else {
+    headerTag.classList.remove("scrolled")
+  }
+}
 
-      if (section.hasAttribute("data-is-dark")) {
-        headerTag.classList.add("white")
-      } else {
-        headerTag.classList.remove("white")
-      }
-    }
-  })
+const fadeBox = function () {
+  const pixels = window.pageYOffset
+  const alpha = Math.min(pixels / 200, 0.25)
+  
+  headerTag.style.boxShadow = `0 0 10px rgba(0, 0, 0, ${alpha})`
+
+}
+
+fadeBox()
+toggleHeader()
+
+document.addEventListener("scroll", function () {
+  toggleHeader()
+  fadeBox()
 })
