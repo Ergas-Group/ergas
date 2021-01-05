@@ -1,6 +1,8 @@
 
 
 const navLinks = document.querySelectorAll("nav a")
+const sections = document.querySelectorAll("section")
+
 
 const navObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {

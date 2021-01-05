@@ -443,7 +443,7 @@ video.fade {
   }
 }
 
-@media screen and (max-width: 40rem) {
+@media screen and (max-width: 59rem) {
 
   html {
     scroll-snap-type: none;
@@ -472,6 +472,13 @@ video.fade {
 
   section.s2 div {
     margin: 0 auto;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid;
+  }
+
+  .miscfade {
+    background-color: white;
+    transition: 0s;
   }
 
   section.s3 {
@@ -494,7 +501,6 @@ video.fade {
     padding: 0rem;
     margin: 0;
   }
-
 
   form input.file-input {
     display: none;
