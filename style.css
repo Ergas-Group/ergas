@@ -78,6 +78,8 @@ header button {
   background-color: transparent;
   color: white;
   border-color: white;
+
+  display: none;
 }
 
 header button:hover {
@@ -167,54 +169,48 @@ video {
 section.s2 {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-}
-
-section.s2 div {
-  flex-grow: 1;
-  margin: 5.25rem auto 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  max-width: 50rem;
-}
-
-section.s3 {
-  min-height: 100vh;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-section.s3 .container {
+section.s2 .about-top {
+  margin: 6.25rem auto 3rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 70rem;
+}
+
+
+section.s2 .container {
   width: 100%;
   max-width: 80rem;
-  margin: 5.25rem auto 0 auto;
-  padding: 5rem;
+  margin: 0 auto 1rem auto;
+  padding: 1rem 5rem 0 5rem;
   display: flex;
   justify-content: space-between;
 }
 
-section.s3 .container div {
+section.s2 .container div {
   width: calc(25% - 2.5rem);
   margin: 0;
   padding: 0;
 }
 
-section.s4 {
+
+section.s3 {
   background-color: black;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 0;
 }
 
 .form-container {
-  width: 100%;
+  max-width: 100%;
   flex-grow: 1;
-  margin-top: 8.75rem;
+  margin-top: 6.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -297,17 +293,33 @@ form #submit:hover {
 }
 
 footer {
+  background-color: #222222;
+  width: 100vw;
+  height: 12rem;
+  margin: 0;
+  padding: 0 1rem;
   display: flex;
-  width: 50rem;
+  align-items: center;
+  justify-content: center;
+}
+
+footer main {
+  width: 60rem;
   max-width: 100%;
-  height: 3.5rem;
-  margin: 0 auto;
-  padding: 0;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  border-top: 1px solid;
-  color: black;
+}
+
+footer main div {
+  width: 33.33%;
+  border-left: 2px solid black;
+  height: 8rem;
+  padding: 1rem 4rem;
+}
+
+footer main div:first-of-type {
+  border: none;
 }
 
 /* TEXT */
@@ -321,13 +333,23 @@ header {
   white-space: nowrap;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 p {
   font-size: 1rem;
+  text-align: justify;
 }
 
 h2 {
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+
 }
 
 h3 {
@@ -359,9 +381,7 @@ footer p {
   color: white;
 }
 
-footer p:last-of-type {
-  text-align: right;
-}
+
 
 /* ANIMATIONS */
 /*img {
@@ -416,7 +436,7 @@ video.fade {
     display: none;
   }
 
-  section.s3 .container {
+  section.s2 .container {
     padding: 2rem;
   }
 
@@ -441,6 +461,12 @@ video.fade {
   form * {
     font-size: 15px
   }
+
+  header a {
+    font-size: 1.25rem;
+  }
+
+
 }
 
 @media screen and (max-width: 59rem) {
@@ -460,8 +486,7 @@ video.fade {
     padding: 1rem;
   }
 
-  section.s2,
-  section.s3 {
+  section.s2 {
     min-height: auto;
   }
 
@@ -470,8 +495,8 @@ video.fade {
     padding-top: 3rem;
   }
 
-  section.s2 div {
-    margin: 0 auto;
+  section.s2 .about-top {
+    margin: 0 0 2rem 0;
     padding-bottom: 2rem;
     border-bottom: 2px solid;
   }
@@ -481,25 +506,20 @@ video.fade {
     transition: 0s;
   }
 
-  section.s3 {
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-  }
-
-  section.s3 .container {
+  section.s2 .container {
     margin: 0;
     padding: 0;
     flex-direction: column;
   }
 
-  section.s3 .container div {
+  section.s2 .container div {
     width: 100%;
-
   }
 
   .form-container {
-    padding: 0rem;
-    margin: 0;
+    padding: 0;
+    margin: 1rem;
+    max-width: 100%;
   }
 
   form input.file-input {
@@ -508,18 +528,33 @@ video.fade {
 
   footer {
     flex-direction: column;
-    height: 6rem;
   }
 
-  footer p {
-    text-align: center;
-    padding: .5rem 0;
+  footer main {
+    display: flex;
+    flex-direction: column;
   }
 
-  footer p:last-of-type {
-    text-align: center;
-    padding-top: 0;
+  footer main div {
+    width: 100%;
+    border-left: none;
+    height: auto;
+    padding: 0;
+    text-align: left;
   }
+
+  footer main div:first-of-type {
+    display: none;
+  }
+
+  footer main div:last-of-type {
+    margin-top: 1rem;
+  }
+
+  footer h3 {
+    margin-top: 0;
+  }
+
 }
 
 @media screen and (max-height: 22rem) {
