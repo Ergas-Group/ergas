@@ -19,12 +19,13 @@ html {
   scroll-behavior: smooth;
   background-color: #333333;
   -webkit-text-size-adjust: 100%;
-  font-size: 18px;
+  font-size: 20px;
   text-rendering: optimizeLegibility;
   font-kerning: normal;
   text-decoration: none;
   line-height: 1.45;
-  font-family: 'Arimo', sans-serif;
+  font-family: 'Helvetica', 'Arimo', sans-serif;
+  font-weight: 300;
 }
 
 body {
@@ -104,8 +105,8 @@ nav {
 }
 
 nav a {
-  width: .83rem;
-  height: .83rem;
+  width: 1rem;
+  height: 1rem;
   margin: .3rem 0;
   background-color: #BCBEBC;
   border-radius: 50%;
@@ -183,11 +184,15 @@ section.s2 .about-top {
 }
 
 
+section.s2 .about-top h2 {
+  padding-bottom: 2rem;
+}
+
 section.s2 .container {
   width: 100%;
-  max-width: 80rem;
+  max-width: 70rem;
   margin: 0 auto 1rem auto;
-  padding: 1rem 5rem 0 5rem;
+  padding: 3rem 0 0 0;
   display: flex;
   justify-content: space-between;
 }
@@ -244,6 +249,8 @@ form input {
   appearance: none;
   background-image: none;
   transition: none;
+
+  font-size: .82rem;
 }
 
 form input::-webkit-input-placeholder {
@@ -294,6 +301,7 @@ form #submit:hover {
 
 footer {
   background-color: #222222;
+  background-color: #0A0A0A;
   width: 100vw;
   height: 12rem;
   margin: 0;
@@ -329,7 +337,7 @@ footer main div:first-of-type {
 }
 
 header {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   white-space: nowrap;
 }
 
@@ -340,7 +348,7 @@ a {
 
 p {
   font-size: 1rem;
-  text-align: justify;
+  text-align: ;
 }
 
 h2 {
@@ -357,7 +365,6 @@ h3 {
   font-weight: 600;
   padding: 0;
   margin-bottom: .25rem;
-  text-transform: uppercase;
 }
 
 .container p {
@@ -381,6 +388,12 @@ footer p {
   color: white;
 }
 
+footer h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: .15rem;
+  padding-bottom: .5rem;
+}
 
 
 /* ANIMATIONS */
@@ -434,10 +447,6 @@ video.fade {
 
   nav {
     display: none;
-  }
-
-  section.s2 .container {
-    padding: 2rem;
   }
 
   .form-container {
@@ -510,6 +519,10 @@ video.fade {
     margin: 0;
     padding: 0;
     flex-direction: column;
+  }
+
+  section.s2 .about-top h2 {
+    padding-bottom: .5rem;
   }
 
   section.s2 .container div {
