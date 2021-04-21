@@ -139,6 +139,10 @@ a {
   color: inherit;
 }
 
+footer a:hover {
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 34rem) {
   html {
     font-size: 1.15rem;
