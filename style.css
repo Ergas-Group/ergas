@@ -160,6 +160,12 @@ footer a:hover {
     padding-top: 1.25rem;
   }
 
+  p {
+    text-align: left;
+    font-size: 1.075rem;
+    line-height: 1.35;
+  }
+
   header button {
     font-size: 1rem;
   }
