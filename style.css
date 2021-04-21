@@ -146,9 +146,6 @@ footer a:hover {
 }
 
 @media screen and (max-width: 34rem) {
-  html {
-    font-size: 1.15rem;
-  }
 
   h1 {
     font-size: 1.4rem;
@@ -160,7 +157,7 @@ footer a:hover {
   }
 
   p {
-    text-align: left;
+    text-align: ;
   }
 
   footer {
