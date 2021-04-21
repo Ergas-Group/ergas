@@ -156,6 +156,11 @@ footer a:hover {
     justify-content: space-between;
   }
 
+  header button {
+    font-size: 1rem;
+    padding-top: .45rem;
+  }
+
   p {
     text-align: ;
   }
@@ -167,11 +172,11 @@ footer a:hover {
 
   footer small {
     display: block;
-    max-width: 12.5rem;
+    max-width: 15.5rem;
     padding-left: 0;
-    font-size: .55rem;
+    font-size: .65rem;
     font-weight: 600;
+    line-height: 1.35;
     text-transform: uppercase;
-    font-style:
   }
 }
