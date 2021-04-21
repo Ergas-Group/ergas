@@ -50,7 +50,7 @@ html {
 
 
 @keyframes fade {
-  from {filter: grayscale(1) brightness(.25);}
+  from {filter: grayscale(1) brightness(.0);}
   to {filter: grayscale(0) brightness(.55);}
 }
 
