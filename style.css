@@ -43,12 +43,16 @@ html {
   min-width: 100%;
   min-height: 100%;
   background-image: url('/images/poster.png');
-  filter: grayscale(1) brightness(.25);
-  transition: filter 3s;
+
+  animation-name: fade;
+  animation-duration: 3s;
+  filter: grayscale(0) brightness(.55);
 }
 
-.video-container video.fade {
-  filter: grayscale(0) brightness(.55);
+
+@keyframes fade {
+  from {filter: grayscale(1) brightness(.25);}
+  to {filter: grayscale(0) brightness(.55);}
 }
 
 body {
