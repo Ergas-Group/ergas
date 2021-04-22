@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
 
 * {
   box-sizing: border-box;
@@ -22,7 +23,7 @@ html {
   font-kerning: normal;
   text-decoration: none;
   line-height: 1.45;
-  font-family: 'Helvetica', 'Arimo', sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
 }
 
@@ -45,13 +46,13 @@ html {
 
   animation-name: fade;
   animation-duration: 3s;
-  filter: grayscale(0) brightness(.55);
+  filter: grayscale(0) brightness(.25);
 }
 
 
 @keyframes fade {
   from {filter: grayscale(1) brightness(.0);}
-  to {filter: grayscale(0) brightness(.55);}
+  to {filter: grayscale(0) brightness(.25);}
 }
 
 body {
@@ -74,13 +75,8 @@ header {
   align-items: center;
 }
 
-header span {
-  font-weight: 400;
-}
-
 header button {
   border: 1px solid;
-  border-radius: .5rem;
   padding: .35rem .7rem;
   background-color: transparent;
   border-color: white;
@@ -114,11 +110,16 @@ footer {
   background: #3A5745;
 }
 
-h1 {
+header h1 {
   font-size: 1.5rem;
   margin: 0;
   padding: 0;
   line-height: 1.2;
+  font-weight: 600;
+}
+
+header h1 span {
+  font-weight: 100;
 }
 
 header button {
@@ -130,6 +131,7 @@ p {
   padding: 0;
   font-size: 1rem;
   text-align: justify;
+  font-family: "Times New Roman", serif;
 }
 
 footer small {
