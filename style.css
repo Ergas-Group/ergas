@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
 
 
 * {
@@ -48,7 +48,6 @@ html {
   animation-duration: 3s;
   filter: grayscale(0) brightness(.25);
 }
-
 
 @keyframes fade {
   from {filter: grayscale(1) brightness(.0);}
@@ -120,6 +119,8 @@ header h1 {
 
 header h1 span {
   font-weight: 100;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -.05rem;
 }
 
 header button {
