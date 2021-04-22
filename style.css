@@ -181,11 +181,11 @@ footer a:hover {
 
   footer small {
     display: block;
-    max-width: 15.5rem;
+    max-width: 14rem;
     padding-left: 0;
-    font-size: .65rem;
+    font-size: .55rem;
     font-weight: 600;
-    line-height: 1.35;
+    line-height: 1.2;
     text-transform: uppercase;
   }
 }
